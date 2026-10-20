@@ -36,3 +36,9 @@ h1::after{content:"";position:absolute;left:50%;bottom:-10px;width:14px;height:1
 @media(min-width:960px){.features ul{grid-template-columns:repeat(4,1fr)}}
 @media (prefers-color-scheme:dark){.features li{border-color:#334155;border-left-color:var(--lime)}.features li span,.later{color:#cbd5e1}}
 @media (prefers-reduced-motion:reduce){h1 img,.soon{animation:none}h1::after{display:none}}
+
+/* Sport backgrounds (Graphics Bot) */
+body{background-image:url(assets/bg/sanlaro-landing-desktop-light.webp);background-position:center;background-size:cover;background-repeat:no-repeat;background-attachment:fixed}
+@media (max-width:768px){body{background-image:url(assets/bg/sanlaro-landing-mobile-light.webp);background-attachment:scroll}}
+@media (prefers-color-scheme:dark){body{background-image:url(assets/bg/sanlaro-landing-desktop-dark.webp)}
+@media (max-width:768px){body{background-image:url(assets/bg/sanlaro-landing-mobile-dark.webp)}}}
