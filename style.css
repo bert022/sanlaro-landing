@@ -53,3 +53,23 @@ body{background-image:url(assets/bg/sanlaro-landing-desktop-light.webp);backgrou
 @media(max-width:480px){.features li{max-width:none;flex-basis:100%}}
 @media (prefers-color-scheme:dark){.features li{background:rgba(15,23,42,.45);border-color:rgba(132,204,22,.35)}}
 @media (prefers-reduced-motion:reduce){.features li{transition:none}.features li:hover{transform:none}}
+
+/* Waitlist form */
+.waitlist{width:100%;max-width:420px;text-align:left;padding:1.1rem;border:1px solid rgba(132,204,22,.35);border-radius:16px;background:rgba(255,255,255,.7);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 6px 20px rgba(15,23,42,.07)}
+.waitlist h2{font-size:1.25rem;text-align:center}
+.wl-sub{text-align:center;font-size:.9rem;color:var(--slate);margin:.2rem 0 .8rem}
+#wl{display:flex;flex-direction:column;gap:.55rem}
+#wl input:not([type=checkbox]):not([type=radio]),#wl select{width:100%;font:inherit;font-size:1rem;padding:.6rem .75rem;min-height:44px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;color:var(--ink)}
+#wl input:focus,#wl select:focus{outline:2px solid var(--lime);outline-offset:1px}
+#wl fieldset{border:0;padding:0;display:flex;flex-wrap:wrap;gap:.35rem}
+#wl legend{font-size:.85rem;font-weight:700;margin-bottom:.3rem}
+#wl fieldset label{display:inline-flex;align-items:center;gap:.3rem;font-size:.85rem;padding:.35rem .65rem;border:1px solid #cbd5e1;border-radius:999px;cursor:pointer;min-height:36px}
+#wl fieldset label:has(input:checked){border-color:var(--lime);background:rgba(132,204,22,.2)}
+.wl-note,.wl-consent{font-size:.78rem;color:var(--slate)}
+.wl-tel{display:flex;gap:.4rem;align-items:center}
+.wl-tel span{white-space:nowrap;font-size:.9rem;font-weight:500}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+#wl button{font:inherit;font-weight:700;min-height:44px;border:0;border-radius:999px;background:var(--lime);color:var(--ink);cursor:pointer}
+#wl button:disabled{opacity:.6}
+.wl-msg{font-size:.85rem;min-height:1em}.wl-msg.ok{color:#3f6212}.wl-msg.err{color:#b91c1c}
+@media (prefers-color-scheme:dark){.waitlist{background:rgba(15,23,42,.6)}.wl-sub,.wl-note,.wl-consent{color:#cbd5e1}#wl fieldset label{border-color:#475569}.wl-msg.ok{color:#bef264}.wl-msg.err{color:#fca5a5}}

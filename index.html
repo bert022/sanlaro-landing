@@ -42,8 +42,43 @@
     </ul>
     <p class="later">Court bookings for venues, coming soon.</p>
   </section>
+  <section class="waitlist" aria-labelledby="wl-h">
+    <h2 id="wl-h">Join the waitlist</h2>
+    <p class="wl-sub">Mauna sa SanLaro. Sabihan ka namin pag ready na.</p>
+    <form id="wl" novalidate>
+      <input name="name" maxlength="80" placeholder="Pangalan (Name)" autocomplete="name" required aria-label="Name">
+      <input name="city" maxlength="60" placeholder="City (hal. Pasig)" autocomplete="address-level2" required aria-label="City">
+      <fieldset><legend>Sport(s)</legend>
+        <label><input type="checkbox" name="sport" value="Pickleball">Pickleball</label>
+        <label><input type="checkbox" name="sport" value="Badminton">Badminton</label>
+        <label><input type="checkbox" name="sport" value="Volleyball">Volleyball</label>
+        <label><input type="checkbox" name="sport" value="Basketball">Basketball</label>
+        <label><input type="checkbox" name="sport" value="Tennis">Tennis</label>
+        <label><input type="checkbox" name="sport" value="Other">Other</label>
+      </fieldset>
+      <fieldset><legend>Ako ay…</legend>
+        <label><input type="radio" name="role" value="Player">I&rsquo;m a player</label>
+        <label><input type="radio" name="role" value="Organizer">I&rsquo;m an organizer</label>
+      </fieldset>
+      <p class="wl-note">Email o mobile, kahit isa lang.</p>
+      <input name="email" type="email" maxlength="120" placeholder="Email" autocomplete="email" aria-label="Email">
+      <div class="wl-tel"><span aria-hidden="true">🇵🇭 +63</span><input name="mobile" type="tel" inputmode="numeric" maxlength="12" placeholder="9171234567" autocomplete="tel-national" aria-label="Philippine mobile number, without the leading 0"></div>
+      <select name="heard" required aria-label="Saan mo nalaman ang SanLaro?">
+        <option value="">Saan mo nalaman ang SanLaro?</option>
+        <option>Facebook group</option><option>Facebook Page</option><option>Instagram</option><option>TikTok</option><option>Friend or organizer</option><option>Other</option>
+      </select>
+      <input name="heard_other" maxlength="80" placeholder="Saan? (optional)" hidden aria-label="Other source">
+      <input type="hidden" name="src">
+      <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <p class="wl-consent">Gagamitin lang namin ang info mo para i-update ka tungkol sa SanLaro. Hindi namin ito ibebenta o ibibigay sa iba.<!-- PRIVACY POLICY PLACEHOLDER: once final, add: <a href="/privacy">Privacy Policy</a> --></p>
+      <button type="submit">Join the waitlist</button>
+      <p id="wl-msg" class="wl-msg" role="status" aria-live="polite"></p>
+    </form>
+  </section>
   <p class="contact"><a href="mailto:hello@sanlaro.com">hello@sanlaro.com</a></p>
 </main>
 <footer>&copy; SanLaro</footer>
+<script src="/config.js"></script>
+<script src="/waitlist.js"></script>
 </body>
 </html>
