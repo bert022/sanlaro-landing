@@ -53,3 +53,31 @@ body{background-image:url(assets/bg/sanlaro-landing-desktop-light.webp);backgrou
 @media(max-width:480px){.features li{max-width:none;flex-basis:100%}}
 @media (prefers-color-scheme:dark){.features li{background:rgba(15,23,42,.45);border-color:rgba(132,204,22,.35)}}
 @media (prefers-reduced-motion:reduce){.features li{transition:none}.features li:hover{transform:none}}
+
+/* Legal pages (privacy, delete-account) */
+body.legal{background-image:none;align-items:stretch}
+body.legal main.legal-main{align-items:stretch;justify-content:flex-start;text-align:left;max-width:720px;width:100%;margin:0 auto;gap:1rem;padding:2rem 1.25rem 3rem}
+.legal-brand{font-weight:700}
+.legal-brand a{color:inherit;text-decoration:none}
+.legal-main h1{font-size:1.75rem;line-height:1.2}
+.pilot-note{font-size:.95rem;padding:.75rem 1rem;border-left:4px solid var(--lime);background:rgba(132,204,22,.15);border-radius:8px}
+.legal-body{display:flex;flex-direction:column;gap:.85rem;font-size:.95rem;line-height:1.55;color:var(--ink)}
+.legal-body h2{font-size:1.15rem;margin-top:.5rem}
+.legal-body h3{font-size:1.05rem}
+.legal-body ul,.legal-body ol{padding-left:1.25rem;display:flex;flex-direction:column;gap:.35rem}
+.legal-body a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.legal-body code{font-size:.9em}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.legal-body table{width:100%;border-collapse:collapse;font-size:.85rem}
+.legal-body th,.legal-body td{border:1px solid #e2e8f0;padding:.5rem .55rem;text-align:left;vertical-align:top}
+.legal-body th{background:rgba(132,204,22,.12)}
+.legal-nav{font-size:.9rem;color:var(--slate)}
+.legal-nav a{color:inherit}
+@media (prefers-color-scheme:dark){
+ body.legal{background:#0F172A}
+ .pilot-note{background:rgba(132,204,22,.12)}
+ .legal-body{color:#e2e8f0}
+ .legal-body th,.legal-body td{border-color:#334155}
+ .legal-nav{color:#cbd5e1}
+}
+body:not(.legal) .legal-nav{text-align:center}
