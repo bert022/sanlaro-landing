@@ -80,3 +80,4 @@ body.legal main.legal-main{align-items:stretch;justify-content:flex-start;text-a
  .legal-body th,.legal-body td{border-color:#334155}
  .legal-nav{color:#cbd5e1}
 }
+body:not(.legal) .legal-nav{text-align:center}
