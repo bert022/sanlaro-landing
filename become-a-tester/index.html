@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Become a tester · SanLaro</title>
+<meta name="description" content="SanLaro is a Philippine sports club, social and booking app in pilot. Request early access on Android through Google Play testing.">
+<meta name="theme-color" content="#84CC16">
+<link rel="canonical" href="https://sanlaro.com/become-a-tester">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SanLaro">
+<meta property="og:title" content="Become a SanLaro tester">
+<meta property="og:description" content="SanLaro is a Philippine sports club app in pilot. Testers get early access on Android through Google Play testing.">
+<meta property="og:url" content="https://sanlaro.com/become-a-tester">
+<meta property="og:image" content="https://sanlaro.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SanLaro logo with the tagline Ano, Tara?">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="tester">
+<main>
+  <h1 class="tester-logo"><a href="/"><img class="brand-logo" src="/assets/logo.svg" width="220" height="101" alt="SanLaro. Ano, Tara?"></a></h1>
+  <div class="tester-card">
+    <h2>Become a tester</h2>
+    <p class="pilot-note" role="note"><strong>Android pilot.</strong> SanLaro is a Philippine sports club, social and booking app. Testers get early access on Android through Google Play testing.</p>
+    <p class="pitch">Tell us the Google account you already use in the Play Store on your Android phone. We'll email a Play testing invite to that address. iPhone testing is not open yet.</p>
+
+    <form id="tester-form" novalidate>
+      <div class="hp" aria-hidden="true">
+        <label for="fax_number">Fax number</label>
+        <input id="fax_number" name="fax_number" type="text" tabindex="-1" autocomplete="off" value="">
+      </div>
+
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" maxlength="80" required>
+        <p class="field-error" id="error-name"></p>
+      </div>
+
+      <div class="field">
+        <label for="email">Gmail or Google Play email</label>
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="120" spellcheck="false" required aria-describedby="email-hint error-email">
+        <p class="hint" id="email-hint">Use the Google account that is signed in to the Play Store on your Android phone. The testing invite is sent to that inbox. It is usually a Gmail address.</p>
+        <p class="field-error" id="error-email"></p>
+      </div>
+
+      <div class="field">
+        <label for="city">City <span class="opt">(optional)</span></label>
+        <input id="city" name="city" type="text" autocomplete="address-level2" maxlength="80" placeholder="Quezon City">
+        <p class="field-error" id="error-city"></p>
+      </div>
+
+      <fieldset class="field sports-field">
+        <legend id="sports">Sports you play <span class="opt">(optional)</span></legend>
+        <div class="sports">
+          <label><input type="checkbox" name="sports" value="pickleball"> Pickleball</label>
+          <label><input type="checkbox" name="sports" value="badminton"> Badminton</label>
+          <label><input type="checkbox" name="sports" value="volleyball"> Volleyball</label>
+          <label><input type="checkbox" name="sports" value="basketball"> Basketball</label>
+          <label><input type="checkbox" name="sports" value="tennis"> Tennis</label>
+          <label><input type="checkbox" name="sports" value="other"> Other</label>
+        </div>
+        <p class="field-error" id="error-sports"></p>
+      </fieldset>
+
+      <div class="field">
+        <label for="phoneModel">Android phone model <span class="opt">(optional)</span></label>
+        <input id="phoneModel" name="phoneModel" type="text" maxlength="80" placeholder="Samsung Galaxy A15" autocomplete="off">
+        <p class="field-error" id="error-phoneModel"></p>
+      </div>
+
+      <div class="field check">
+        <label for="age18"><input id="age18" name="age18" type="checkbox" required> I confirm I am 18 or older.</label>
+        <p class="field-error" id="error-age18"></p>
+      </div>
+
+      <div class="field check">
+        <label for="privacyConsent"><input id="privacyConsent" name="privacyConsent" type="checkbox" required> I have read the Privacy Policy and agree to SanLaro emailing me a Play testing invite.</label>
+        <p class="hint"><a href="/privacy">Read the Privacy Policy</a></p>
+        <p class="field-error" id="error-privacyConsent"></p>
+      </div>
+
+      <p class="form-error" id="form-error" role="alert" tabindex="-1" hidden></p>
+      <button class="primary" id="tester-submit" type="submit">Request an invite</button>
+      <p class="hint keep">We store your name, email, and anything else you fill in so we can send the invite. We don't sell it. Questions: <a href="mailto:hello@sanlaro.com">hello@sanlaro.com</a>.</p>
+    </form>
+
+    <div id="tester-success" hidden>
+      <h2 id="success-heading" tabindex="-1">You're on the list</h2>
+      <p id="success-text" role="status"></p>
+      <ol class="next">
+        <li>Watch for an email from Google Play testing.</li>
+        <li>Open it on the Android phone that uses this Google account.</li>
+        <li>Accept the invite, then install SanLaro from the Play Store.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="legal-nav"><a href="/">Home</a> · <a href="/privacy">Privacy Policy</a> · <a href="/delete-account">Delete account</a> · <a href="mailto:hello@sanlaro.com">hello@sanlaro.com</a></p>
+</main>
+<footer>&copy; SanLaro</footer>
+<noscript><p class="noscript">JavaScript is off. Email <a href="mailto:hello@sanlaro.com">hello@sanlaro.com</a> with your name and the Gmail you use in the Play Store, and we'll add you.</p></noscript>
+<script type="module" src="/tester-page.js"></script>
+</body>
+</html>
